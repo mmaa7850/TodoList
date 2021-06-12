@@ -1,0 +1,178 @@
+@mixin mobile{
+    @media(max-width:414px){
+      @content;
+    }
+}
+
+body{
+    height: 840px;
+    background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
+    
+    .wrap{
+        width: 500px;
+        margin: 0 auto;
+        h1{
+            text-align: center;
+            font-size: 48px;
+            font-family: BalooTamma2-Bold;
+            color: #333333;
+            letter-spacing: 8.75px;
+            @include mobile{
+                font-size: 32px;
+            }
+        }
+        .add{
+            margin: 0 auto;
+            position: relative;
+            max-width: 100%;
+            padding-bottom: 8px;
+            margin-right: 18px;
+            & > input{
+                background: #FFFFFF;
+                font-size: 16px;
+                box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+                border: 0px;
+                border-radius: 10px;
+                width: 100%;
+                padding: 18px 0px 18px 18px;
+            }
+            & > button{
+                background-color: #FFFFFF;
+                border: 0px;
+                font-size: 40px;
+                position: absolute;
+                top: 4px;
+                right: -15px;
+                @include mobile{
+                    background-color: #FFFFFF;
+                border: 0px;
+                font-size: 40px;
+                position: absolute;
+                top: 4px;
+                right: -5px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            @include mobile{
+                padding: 0 12px 8px 12px;
+            }
+            
+        }
+        
+        .content{
+            max-width: 100%;
+            margin: 0 auto;
+            & > form{
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+                & .progress{
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    padding-top: 16px;
+                    padding-bottom: 8px;
+                    & > input{
+                        width: 33%;
+                        color: #9F9A91;
+                        border: 0;
+                        font-size: 16px;
+                        background-color: #FFFFFF;
+                        border-bottom: 2px solid #EFEFEF;
+                        padding-bottom: 16px;
+                        
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &:focus{
+                            border-bottom: 2px solid #333333;
+                            color: #333333;
+                        }
+                    }
+                    
+                }
+                & .list{  
+                    & > ul{
+                        list-style-type: none;
+                        margin: 0px;
+                        padding-left: 0px;
+                        & > li{
+                            display: flex;    
+                            align-items: center;
+                            border-bottom: 1px solid #EFEFEF;
+                            padding: 16px;
+                            letter-spacing: 0.7px;
+                            &:hover > img{
+                                opacity: 100;
+                            }
+                            & > .checkbox{
+                                height: 20px;
+                                width: 20px;
+                                margin-right: 18px;
+                                border: 1px solid #333333;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                z-index: 2;
+                                & > .icons{
+                                    text-align: center;
+                                    display: none;
+                                }
+                            }
+                            & > .checkboxDone{
+                                margin-right: 20px;
+                                border: 0px;
+                                cursor: pointer;
+                                & > .icons{
+                                    display: block;
+                                    color: #FFD370;
+                                }
+                            }
+                            & > .h2{
+                                font-size: 16px;
+                                font-weight: normal;
+                                font-family: NotoSansCJKtc-Regular;
+                                margin: 0px;   
+                            }
+                            & > .h2Done{
+                                color: rgba(51, 51, 51, 0.3);
+                                text-decoration: line-through;
+                            }
+                            & > img{
+                                width: 16px;
+                                height: 16px;
+                                text-align: center;
+                                opacity: 0;
+                                margin-left: auto;
+                                cursor: pointer; 
+                            }
+                            
+                        }
+                    }
+                }
+                & .form-footer{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px 24px 24px 24px;
+                    & > input{
+                        background-color: #FFFFFF;
+                        color: #9F9A91;
+                        border: 0;
+                        letter-spacing: 0.7px;
+                        &:hover{
+                             cursor: pointer;
+                        }
+                    }
+                }
+            }
+            @include mobile{
+                padding: 0 12px;
+            }
+        }    
+    }
+
+    
+    
+}
+  

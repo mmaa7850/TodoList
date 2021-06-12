@@ -1,0 +1,210 @@
+body {
+  height: 840px;
+  background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
+}
+
+body .wrap {
+  width: 500px;
+  margin: 0 auto;
+}
+
+body .wrap h1 {
+  text-align: center;
+  font-size: 48px;
+  font-family: BalooTamma2-Bold;
+  color: #333333;
+  letter-spacing: 8.75px;
+}
+
+@media (max-width: 414px) {
+  body .wrap h1 {
+    font-size: 32px;
+  }
+}
+
+body .wrap .add {
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%;
+  padding-bottom: 8px;
+  margin-right: 18px;
+}
+
+body .wrap .add > input {
+  background: #FFFFFF;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  border: 0px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 18px 0px 18px 18px;
+}
+
+body .wrap .add > button {
+  background-color: #FFFFFF;
+  border: 0px;
+  font-size: 40px;
+  position: absolute;
+  top: 4px;
+  right: -15px;
+}
+
+@media (max-width: 414px) {
+  body .wrap .add > button {
+    background-color: #FFFFFF;
+    border: 0px;
+    font-size: 40px;
+    position: absolute;
+    top: 4px;
+    right: -5px;
+  }
+}
+
+body .wrap .add > button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  body .wrap .add {
+    padding: 0 12px 8px 12px;
+  }
+}
+
+body .wrap .content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body .wrap .content > form {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+body .wrap .content > form .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+body .wrap .content > form .progress > input {
+  width: 33%;
+  color: #9F9A91;
+  border: 0;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #EFEFEF;
+  padding-bottom: 16px;
+}
+
+body .wrap .content > form .progress > input:hover {
+  cursor: pointer;
+}
+
+body .wrap .content > form .progress > input:focus {
+  border-bottom: 2px solid #333333;
+  color: #333333;
+}
+
+body .wrap .content > form .list > ul {
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+body .wrap .content > form .list > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #EFEFEF;
+  padding: 16px;
+  letter-spacing: 0.7px;
+}
+
+body .wrap .content > form .list > ul > li:hover > img {
+  opacity: 100;
+}
+
+body .wrap .content > form .list > ul > li > .checkbox {
+  height: 20px;
+  width: 20px;
+  margin-right: 18px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+body .wrap .content > form .list > ul > li > .checkbox > .icons {
+  text-align: center;
+  display: none;
+}
+
+body .wrap .content > form .list > ul > li > .checkboxDone {
+  margin-right: 20px;
+  border: 0px;
+  cursor: pointer;
+}
+
+body .wrap .content > form .list > ul > li > .checkboxDone > .icons {
+  display: block;
+  color: #FFD370;
+}
+
+body .wrap .content > form .list > ul > li > .h2 {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: NotoSansCJKtc-Regular;
+  margin: 0px;
+}
+
+body .wrap .content > form .list > ul > li > .h2Done {
+  color: rgba(51, 51, 51, 0.3);
+  text-decoration: line-through;
+}
+
+body .wrap .content > form .list > ul > li > img {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  opacity: 0;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+body .wrap .content > form .form-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 24px 24px 24px;
+}
+
+body .wrap .content > form .form-footer > input {
+  background-color: #FFFFFF;
+  color: #9F9A91;
+  border: 0;
+  letter-spacing: 0.7px;
+}
+
+body .wrap .content > form .form-footer > input:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  body .wrap .content {
+    padding: 0 12px;
+  }
+}
+/*# sourceMappingURL=all.css.map */
