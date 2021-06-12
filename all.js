@@ -92,6 +92,7 @@ formFooter.addEventListener("click", function (e) {
 // 增加class
 function addFunction() {
     ul.addEventListener("click", function (e) {
+        
         if (e.target.getAttribute("value") !== "checkbox") {
             return;
         }
@@ -114,6 +115,7 @@ function addFunction() {
 // 減少class
 function removeFunction() {
     ul.addEventListener("click", function (e) {
+        
         if (e.target.getAttribute("class") !== "fas fa-check") {
             return;
         }
@@ -169,9 +171,12 @@ undone.addEventListener("click", function(e){
     let list = "";    
     data.forEach(function (item, index) {
         let undoneHtml = `<li><div value="checkbox" class="checkbox" data-num=${index}><div class="icons"><i class="fas fa-check" data-num=${index}></i></div></div><h2 class="h2">${item.content}</h2><img data-num=${index} class="delete" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" ></li>`;
-        
+        let doneHtml = `<li class="none"><div value="checkbox" class="checkbox checkboxDone" data-num=${index}><div class="icons"><i class="fas fa-check" data-num=${index}></i></div></div><h2 class="h2 h2Done">${item.content}</h2><img data-num=${index} class="delete" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" ></li>`;
         if(item.status == false){
             list += undoneHtml;
+        }
+        else{
+            list += doneHtml;
         }
     });
     ul.innerHTML = list;
@@ -181,10 +186,14 @@ undone.addEventListener("click", function(e){
 done.addEventListener("click", function(e){
     let list = "";    
     data.forEach(function (item, index) {
+        let undoneHtml = `<li class="none"><div value="checkbox" class="checkbox" data-num=${index}><div class="icons"><i class="fas fa-check" data-num=${index}></i></div></div><h2 class="h2">${item.content}</h2><img data-num=${index} class="delete" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" ></li>`;
         let doneHtml = `<li><div value="checkbox" class="checkbox checkboxDone" data-num=${index}><div class="icons"><i class="fas fa-check" data-num=${index}></i></div></div><h2 class="h2 h2Done">${item.content}</h2><img data-num=${index} class="delete" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" ></li>`;
         if(item.status == true){
             list += doneHtml;
-        }       
+        }
+        else{
+            list += undoneHtml;
+        }
     });
     ul.innerHTML = list;
     

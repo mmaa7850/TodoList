@@ -178,6 +178,10 @@ body .wrap .content > form .list > ul > li > img {
   cursor: pointer;
 }
 
+body .wrap .content > form .list > ul > .none {
+  display: none;
+}
+
 body .wrap .content > form .form-footer {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -144,7 +144,9 @@ body{
                                 margin-left: auto;
                                 cursor: pointer; 
                             }
-                            
+                        }
+                        & > .none{
+                            display: none;
                         }
                     }
                 }
