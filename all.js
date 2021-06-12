@@ -175,6 +175,7 @@ undone.addEventListener("click", function(e){
         }
     });
     ul.innerHTML = list;
+    renderData();
 })
 
 done.addEventListener("click", function(e){
@@ -186,4 +187,5 @@ done.addEventListener("click", function(e){
         }       
     });
     ul.innerHTML = list;
+    renderData();
 })
