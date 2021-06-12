@@ -151,7 +151,7 @@ function switchUnderLine(){
         if(e.target.getAttribute("class") == "all"){
             all.classList.add("underline");
             undone.classList.remove("underline");
-            done.classList.remove("underline");
+            done.classList.remove("underline"); 
         }
         else if(e.target.getAttribute("class") == "undone"){
             all.classList.remove("underline");
