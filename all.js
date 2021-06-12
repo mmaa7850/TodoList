@@ -5,7 +5,7 @@ const formFooter = document.querySelector(".form-footer");
 
 
 let data = [];
-let delData = [];
+
 // list function
 function renderData() {
     let list = "";    
@@ -40,6 +40,7 @@ add.addEventListener("click", function (e) {
     unfinished();
     addFunction();
     removeFunction();
+    switchUnderLine();
 })
 
 // 計算待辦事項
@@ -66,6 +67,7 @@ ul.addEventListener("click", function (e) {
     delData = data.splice(num, 1);
     renderData();
     unfinished();
+    switchUnderLine();
 })
 
 // 清除已完成事項
@@ -79,9 +81,12 @@ formFooter.addEventListener("click", function (e) {
     data.forEach(function (item, index) {
         if (item.status == true) {
             data.splice(index, 1);
-            renderData();
+            
         }
+        
     });
+    renderData();
+    switchUnderLine();
 })
 
 // 增加class
@@ -123,6 +128,8 @@ function removeFunction() {
     
 }
 
+
+
 // 選擇項目
 const all = document.querySelector(".all");
 const undone = document.querySelector(".undone");
@@ -131,6 +138,32 @@ const done = document.querySelector(".done");
 all.addEventListener("click", function(e){
     renderData();
 })
+
+// 選擇項目效果
+function switchUnderLine(){
+    const progress = document.querySelector(".progress");
+            all.classList.add("underline");
+            undone.classList.remove("underline");
+            done.classList.remove("underline");
+    progress.addEventListener("click", function(e){
+        if(e.target.getAttribute("class") == "all"){
+            all.classList.add("underline");
+            undone.classList.remove("underline");
+            done.classList.remove("underline");
+        }
+        else if(e.target.getAttribute("class") == "undone"){
+            all.classList.remove("underline");
+            undone.classList.add("underline");
+            done.classList.remove("underline");
+        }
+        else if(e.target.getAttribute("class") == "done"){
+            all.classList.remove("underline");
+            undone.classList.remove("underline");
+            done.classList.add("underline");
+        }
+    })
+}
+switchUnderLine();
 
 undone.addEventListener("click", function(e){
     let list = "";    

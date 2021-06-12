@@ -101,13 +101,10 @@ body .wrap .content > form .progress > input {
   background-color: #FFFFFF;
   border-bottom: 2px solid #EFEFEF;
   padding-bottom: 16px;
-}
-
-body .wrap .content > form .progress > input:hover {
   cursor: pointer;
 }
 
-body .wrap .content > form .progress > input:focus {
+body .wrap .content > form .progress > .underline {
   border-bottom: 2px solid #333333;
   color: #333333;
 }
